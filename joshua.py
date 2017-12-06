@@ -126,10 +126,6 @@ helpMessage ="""
 ЂÕŦ•Ŧђάїŀάηď•Όηŀїηξ
 
           ☆ F̧͈̤̱͎̱̤̞̭̐͒́̀͗͞Ḷ̵̻̝̘͍̏̃͊̉͠Ŏ̩͖͎̹̫͈̏́̑́W ̤̲̯̤̹̲̲̘̈́̿͒ͅĮ̶̼̲̺̣̬̔̿͐̾̾Ṇ̶̨̛̲̭̝̲̝̪̎̾̈́͘͢͜͞S͎̱̺̜̀̿͘̕̕͢P̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠EC̸̡̩̣̲̣̜̊̾͊̃͜ͅT B̵̧͔̟̫̰̮̺̟̥̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ T̶͖̜̻̰͍̮̼́̐̑͒́̕ͅ ☆
-
-
-
-
 """
 helo=""
 
@@ -147,7 +143,6 @@ ki7mid = ki7.getProfile().mid
 Bots=[mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid,ki7mid]
 admsa = "ua2c1c5b32ccbb5e063f592805eea9c48
 
-
 wait = {
     'contact':False,
     'autoJoin':False,
@@ -155,9 +150,7 @@ wait = {
     'leaveRoom':True,
     'timeline':False,
     'autoAdd':True,
-    'message':"""THX FOR ADD : 
-🐺 hhttp://line.me/ti/p/~joshuasiregaar
-""",
+    'message':"👮ยินดีที่ได้รู้จักครับ_บอทตอกลับ 🤔  тнαикѕ fσя α∂∂ιиg мє αѕ α fяιєиd        їď...line.me/ti/p/GJIGtNjzsv",
     "lang":"JP",
     "comment":"Thanks For Add Me",
     "commentOn":False,
@@ -165,7 +158,7 @@ wait = {
     "wblack":False,
     "dblack":False,
     "clock":False,
-    "cName":"しりちゃん追加保護ボット26",
+    "cName":"",
     "cNames":"",
     "blacklist":{},
     "wblacklist":False,
@@ -178,6 +171,7 @@ wait = {
     "copy2":"target",
     "target":{}
     }
+
 
 wait2 = {
     'readPoint':{},
@@ -242,11 +236,11 @@ def bot(op):
         if op.type == 24:
             if wait["leaveRoom"] == True:
                 cl.leaveRoom(op.param1)
-        if op.type == 26:
+        if op.type == 25:
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
-                if msg.from_ == "u2b457b1ef8391ee451c9a22c835e1e33":
+                if msg.from_ == "ua2c1c5b32ccbb5e063f592805eea9c48":
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
                         try:
@@ -324,7 +318,7 @@ def bot(op):
                     cl.sendText(msg.to,msg.text)
             elif msg.text is None:
                 return
-            elif msg.text.lower() == 'help':
+            elif msg.text.lower() == 'คำสั่ง':
                 if wait["lang"] == "JP":
                     cl.sendText(msg.to,helpMessage)
                 else:
@@ -350,7 +344,7 @@ def bot(op):
                 midd = msg.text.replace("Invite:","")
                 cl.findAndAddContactsByMid(midd)
                 cl.inviteIntoGroup(msg.to,[midd])
-            elif "Mybot" == msg.text:
+            elif "คิกเก้อ" == msg.text:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': kimid}
                 cl.sendMessage(msg) 
@@ -368,6 +362,21 @@ def bot(op):
                 cl.sendMessage(msg) 
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': ki6mid}
+                cl.sendMessage(msg)
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': ki7mid}
+                cl.sendMessage(msg)
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': ki8mid}
+                cl.sendMessage(msg)
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': ki9mid}
+                cl.sendMessage(msg)
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': ki10mid}
+                cl.sendMessage(msg)
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': ki11mid}
                 cl.sendMessage(msg)
             elif "Kb1" == msg.text:
                 msg.contentType = 13
@@ -393,6 +402,26 @@ def bot(op):
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': ki6mid}
                 ki6.sendMessage(msg)
+            elif "Kb7" == msg.text:
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': ki7mid}
+                ki7.sendMessage(msg)
+            elif "Kb8" == msg.text:
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': ki8mid}
+                ki8.sendMessage(msg)
+            elif "Kb9" == msg.text:
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': ki9mid}
+                ki9.sendMessage(msg)
+            elif "Kb10" == msg.text:
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': ki10mid}
+                ki10.sendMessage(msg)
+            elif "Kb11" == msg.text:
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': ki11mid}
+                ki11.sendMessage(msg)
             elif msg.text in ["Bot1 Gift","Bot1 gift"]:
                 msg.contentType = 9
                 msg.contentMetadata={'PRDID': '3b92ccf5-54d3-4765-848f-c9ffdc1da020',
@@ -448,7 +477,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"invitan tidak ada")
 
-            elif msg.text in ["Cancel","cancel"]:
+            elif msg.text in ["ss","cancel"]:
                 if msg.toType == 2:
                     group = cl.getGroup(msg.to)
                     if group.invitee is not None:
@@ -528,13 +557,28 @@ def bot(op):
                 ki5.sendText(msg.to,kimid)
             elif "kb6 mid" == msg.text:
                 ki6.sendText(msg.to,ki2mid)
+            elif "kb7 mid" == msg.text:
+                ki7.sendText(msg.to,ki2mid)
+            elif "kb8 mid" == msg.text:
+                ki8.sendText(msg.to,kimid)
+            elif "kb9 mid" == msg.text:
+                ki9.sendText(msg.to,ki2mid)
+            elif "kb10 mid" == msg.text:
+                ki10.sendText(msg.to,kimid)
+            elif "kb11 mid" == msg.text:
+                ki11.sendText(msg.to,ki2mid)
             elif "all mid" == msg.text:
                 ki.sendText(msg.to,kimid)
                 ki2.sendText(msg.to,ki2mid)
                 ki3.sendText(msg.to,ki3mid)
                 ki4.sendText(msg.to,ki4mid)
                 ki5.sendText(msg.to,ki5mid)
-                ki6.sendText(msg.to,ki5mid)
+                ki6.sendText(msg.to,ki6mid)
+		ki7.sendText(msg.to,ki7mid)
+                ki8.sendText(msg.to,ki8mid)
+                ki9.sendText(msg.to,ki9mid)
+                ki10.sendText(msg.to,ki10mid)
+                ki11.sendText(msg.to,ki11mid)
             elif "TL:" in msg.text:
                 tl_text = msg.text.replace("TL:","")
                 cl.sendText(msg.to,"line://home/post?userMid="+mid+"&postId="+cl.new_post(tl_text)["result"]["post"]["postInfo"]["postId"])
@@ -983,13 +1027,22 @@ def bot(op):
                 gid = ki4.getGroupIdsJoined()
                 gid = ki5.getGroupIdsJoined()
                 gid = ki6.getGroupIdsJoined()
-                for i in gid:
+                gid = ki7.getGroupIdsJoined()
+                gid = ki8.getGroupIdsJoined()
+                gid = ki9.getGroupIdsJoined()
+                gid = ki10.getGroupIdsJoined()
+                gid = ki11.getGroupIdsJoined()
+		for i in gid:
                     ki.leaveGroup(i)
                     ki2.leaveGroup(i)
                     ki3.leaveGroup(i)
                     ki4.leaveGroup(i)
                     ki5.leaveGroup(i)
                     ki6.leaveGroup(i)
+                    ki7.leaveGroup(i)
+                    ki8.leaveGroup(i)
+                    ki9.leaveGroup(i)
+                    ki10.leaveGroup(i)
                 if wait["lang"] == "JP":
                     cl.sendText(msg.to,"Kitsune Bot Sudah Keluar Di semua grup")
                 else:
@@ -1102,7 +1155,7 @@ def bot(op):
                         cl.sendText(msg.to,"To turn off")
             elif msg.text in ["Com","Comment"]:
                 cl.sendText(msg.to,"Auto komentar saat ini telah ditetapkan sebagai berikut:👈\n\n" + str(wait["comment"]))
-            elif msg.text in ["url","Url"]:
+            elif msg.text in ["ลิงค์","Url"]:
                 if msg.toType == 2:
                     g = cl.getGroup(msg.to)
                     if g.preventJoinByTicket == True:
@@ -1307,7 +1360,22 @@ def bot(op):
                  for i in gid:
                   h += "[⭐] %s \n" % (cl.getGroup(i).name + " | Members : " + str(len (cl.getGroup(i).members)))
                  cl.sendText(msg.to, "☆「Group List」☆\n"+ h +"Total Group : " +str(len(gid)))
-
+#---------------------------------------------------            
+            elif "TT" in msg.text:
+                group = cl.getGroup(msg.to)
+                k = len(group.members)//100
+                for j in xrange(k+1):
+                    msg = Message(to=msg.to)
+                    txt = u''
+                    s=0
+                    d=[]
+                    for i in group.members[j*100 : (j+1)*100]:
+                        d.append({"S":str(s), "E" :str(s+8), "M":i.mid})
+                        s += 9
+                        txt += u'@Krampus\n'
+                    msg.text = txt
+                    msg.contentMetadata = {u'MENTION':json.dumps({"MENTIONEES":d})}
+                    cl.sendMessage(msg)
 #----------------------------------------------------------
             elif "Unban @" in msg.text:
                 if msg.toType == 2:
@@ -1379,8 +1447,8 @@ def bot(op):
                                 except:
                                     cl.sendText(msg.to,"Error")
 #-----------------------------------------------------------
-            elif msg.text == "Setview":
-                    cl.sendText(msg.to, "Check Yang nyimak")
+            elif msg.text == "แอบ":
+                    cl.sendText(msg.to, "📌เริ่มตั้งเวลาเพื่อ,ส่องคนอ่านβ€")
                     try:
                         del wait2['readPoint'][msg.to]
                         del wait2['readMember'][msg.to]
@@ -1393,7 +1461,7 @@ def bot(op):
                     wait2['ROM'][msg.to] = {}
                     print wait2
 
-            elif msg.text == "Viewseen":
+            elif msg.text == "ส่อง":
                     if msg.to in wait2['readPoint']:
                         if wait2["ROM"][msg.to].items() == []:
                             chiya = ""
@@ -1402,7 +1470,7 @@ def bot(op):
                             for rom in wait2["ROM"][msg.to].items():
                                 print rom
                                 chiya += rom[1] + "\n"
-                        cl.sendText(msg.to,"======Tercyduck====== %s\n=====Tukang Ngintip======\n%s\nReading point creation date n time:\n[%s]" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
+                        cl.sendText(msg.to,"======Tercyduck====== %s\n=====Tukang Ngintip======\n%s\nβ€รายชื่อคนอ่านทั้งหมดβ€ n เวลา:\n🔒%s🔒" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
                     else:
                          cl.sendText(msg.to,"An already read point has not been set.\n「set」you can send ♪ read point will be created ♪")
 
@@ -1547,6 +1615,11 @@ def bot(op):
                     gs = ki4.getGroup(msg.to)
                     gs = ki5.getGroup(msg.to)
                     gs = ki6.getGroup(msg.to)
+                    gs = ki7.getGroup(msg.to)
+                    gs = ki8.getGroup(msg.to)
+                    gs = ki9.getGroup(msg.to)
+                    gs = ki10.getGroup(msg.to)
+                    gs = ki11.getGroup(msg.to)
                     start = time.time()
                     ki.sendText(msg.to, "Nuke Speed")
                     elapsed_time = time.time() - start
@@ -1565,7 +1638,7 @@ def bot(op):
                         for target in targets:
                           if not target in Bots:
                             try:
-                                klist=[ki,ki2,ki3,ki4,ki5,ki6]
+                                klist=[ki,ki2,ki3,ki4,ki5,ki6,ki7]
                                 kicker=random.choice(klist)
                                 kicker.kickoutFromGroup(msg.to,[target])
                                 print (msg.to,[g.mid])
